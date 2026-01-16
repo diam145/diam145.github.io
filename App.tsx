@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
-import { Github, Linkedin, Mail, Cpu, Code, Brain, Laptop, Terminal, Layers, Settings, Wrench, Activity, Database, Radio, Monitor, Zap, Award as AwardIcon } from 'lucide-react';
+import { Github, Linkedin, Mail, Cpu, Brain, Layers, Settings, Activity, Radio, Zap, Monitor } from 'lucide-react';
 import { PROJECTS_MD, WORK_MD, INVOLVEMENT_MD } from './data/content';
 import { parseProjects, parseWork, parseInvolvement } from './services/parserService';
 import { SectionHeader } from './components/SectionHeader';
@@ -29,7 +28,6 @@ const App: React.FC = () => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
 
-    // Fetch dynamic status messages from .txt file
     const loadStatusMessages = async () => {
       try {
         const response = await fetch('/status.txt');
@@ -179,7 +177,6 @@ const App: React.FC = () => {
           </div>
           
           <div className="md:col-span-2 relative">
-             {/* Tech Callout Visual */}
              <div className="blueprint-border bg-white rounded-2xl p-8 relative overflow-hidden group">
                <div className="scanline"></div>
                <div className="space-y-6 relative z-10">
