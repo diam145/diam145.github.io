@@ -15,6 +15,7 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'Software' | 'Hardware'>('Software');
   const [scrolled, setScrolled] = useState(false);
   const [messages, setMessages] = useState<string[]>([
+    'uOttaHack 8 : Project GreenWave (https://github.com/diam145/GreenWave)',
     'KERNAL VERSION 5.15.0-OK',
     'RTL SIMULATION COMPLETE',
     'NEURAL NETWORK OPTIMIZED',
